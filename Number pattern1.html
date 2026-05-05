@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Pattern</title>
+</head>
+<body>
+
+<h2>Number Pattern</h2>
+
+<pre></pre>
+
+<script>
+let n = 5;
+let result = "";
+
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+        result += j;   // print j instead of i
+    }
+    result += "\n";
+}
+
+document.querySelector("pre").textContent = result;
+</script>
+
+</body>
+</html>
