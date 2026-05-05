@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Pattern</title>
+</head>
+<body>
+
+<h2>Star Pattern</h2>
+
+<pre></pre>
+
+<script>
+let n = 4;
+let result = "";
+
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+        result += "*";
+    }
+    result += "\n";
+}
+
+// select the <pre> tag without using id
+document.querySelector("pre").textContent = result;
+</script>
+
+</body>
+</html>
