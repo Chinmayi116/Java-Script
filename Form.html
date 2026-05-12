@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return validate()">
+
+Name:
+<input type="text" id="name"><br><br>
+
+Password:
+<input type="password" id="pass"><br><br>
+
+<input type="submit">
+
+</form>
+
+<script>
+
+function validate()
+{
+    let n = document.getElementById("name").value;
+    let p = document.getElementById("pass").value;
+
+    if(n == "" || p == "")
+    {
+        alert("Fields cannot be empty");
+        return false;
+    }
+
+    return true;
+}
+
+</script>
+
+</body>
+</html>
