@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result</title>
+</head>
+<body>
+
+<h2>Enter Marks of 5 Subjects</h2>
+
+Subject 1:
+<input type="number" id="m1"><br><br>
+
+Subject 2:
+<input type="number" id="m2"><br><br>
+
+Subject 3:
+<input type="number" id="m3"><br><br>
+
+Subject 4:
+<input type="number" id="m4"><br><br>
+
+Subject 5:
+<input type="number" id="m5"><br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+function calculate()
+{
+    let m1 = Number(document.getElementById("m1").value);
+    let m2 = Number(document.getElementById("m2").value);
+    let m3 = Number(document.getElementById("m3").value);
+    let m4 = Number(document.getElementById("m4").value);
+    let m5 = Number(document.getElementById("m5").value);
+
+    let total = m1 + m2 + m3 + m4 + m5;
+
+    let percentage = total / 5;
+
+    let grade;
+
+    if(percentage >= 90)
+    {
+        grade = "A";
+    }
+    else if(percentage >= 75)
+    {
+        grade = "B";
+    }
+    else if(percentage >= 50)
+    {
+        grade = "C";
+    }
+    else
+    {
+        grade = "Fail";
+    }
+
+    document.getElementById("result").innerHTML =
+    "Total = " + total +
+    "<br>Percentage = " + percentage + "%" +
+    "<br>Grade = " + grade;
+}
+
+</script>
+
+</body>
+</html>
