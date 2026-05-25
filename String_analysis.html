@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Analysis</title>
+</head>
+<body>
+
+<h2>String Analysis Program</h2>
+
+Enter String:
+<input type="text" id="text"><br><br>
+
+<button onclick="analyze()">Analyze</button>
+
+<h3 id="output"></h3>
+
+<script>
+
+function analyze()
+{
+    let str = document.getElementById("text").value;
+
+    let vowels = 0;
+    let consonants = 0;
+    let digits = 0;
+    let special = 0;
+
+    for(let i = 0; i < str.length; i++)
+    {
+        let ch = str[i];
+
+        if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+        {
+            if("AEIOUaeiou".indexOf(ch) != -1)
+            {
+                vowels++;
+            }
+            else
+            {
+                consonants++;
+            }
+        }
+        else if(ch >= '0' && ch <= '9')
+        {
+            digits++;
+        }
+        else
+        {
+            special++;
+        }
+    }
+
+    document.getElementById("output").innerHTML =
+    "Vowels = " + vowels +
+    "<br>Consonants = " + consonants +
+    "<br>Digits = " + digits +
+    "<br>Special Characters = " + special;
+}
+
+</script>
+
+</body>
+</html>
