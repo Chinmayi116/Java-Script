@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit Array Operations</title>
+</head>
+<body>
+
+<script>
+    // Create array
+    let fruits = ["Apple", "Banana", "Mango"];
+
+    // Add Orange to end
+    fruits.push("Orange");
+
+    // Remove first element
+    let firstFruit = fruits.shift();
+
+    // Add Grapes to beginning
+    fruits.unshift("Grapes");
+
+    // Remove last element
+    let lastFruit = fruits.pop();
+
+    // Display results
+    document.write("Removed First Element: " + firstFruit + "<br>");
+    document.write("Removed Last Element: " + lastFruit + "<br>");
+    document.write("Remaining Fruits: " + fruits);
+</script>
+
+</body>
+</html>
