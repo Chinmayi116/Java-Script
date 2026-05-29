@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number</title>
+</head>
+<body>
+
+<script>
+
+let numbers = [10, 45, 78, 23, 89];
+let largest = numbers[0];
+
+for(let i = 1; i < numbers.length; i++) {
+
+    if(numbers[i] > largest) {
+        largest = numbers[i];
+    }
+}
+
+document.write("Largest Number = " + largest);
+
+</script>
+
+</body>
+</html>
