@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Click Image</title>
+
+    <style>
+        #photo{
+            position:absolute;
+            width:100px;
+            height:100px;
+            display:none;
+        }
+    </style>
+
+    <script>
+        function showImage(event)
+        {
+            var img = document.getElementById("photo");
+
+            img.style.left = event.pageX + "px";
+            img.style.top = event.pageY + "px";
+
+            img.style.display = "block";
+        }
+    </script>
+</head>
+
+<body onclick="showImage(event)">
+
+<h2>Click Anywhere on Screen</h2>
+
+<p>
+When you click the mouse button, the image will appear at that position.
+</p>
+
+<!-- Replace photo.jpg with your own image -->
+<img src="photo.jpg" id="photo">
+
+</body>
+</html>
