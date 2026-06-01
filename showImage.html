@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Home</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .p1:hover{
+            color: red;
+            font-size: 28px;
+            font-family: cursive;
+            font-style: italic;
+        }
+
+        .p2:hover{
+            color: blue;
+            font-size: 30px;
+            font-family: Georgia;
+            font-style: oblique;
+        }
+
+        .p3:hover{
+            color: green;
+            font-size: 32px;
+            font-family: Verdana;
+            font-style: italic;
+        }
+
+        #img{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            display: none;
+        }
+    </style>
+
+    <script>
+        function showImage(event)
+        {
+            var image = document.getElementById("img");
+
+            image.style.left = event.pageX + "px";
+            image.style.top = event.pageY + "px";
+
+            image.style.display = "block";
+        }
+    </script>
+</head>
+
+<body onclick="showImage(event)">
+
+    <h2>My Home</h2>
+
+    <p>
+        My home is a beautiful place with 
+        <span class="p1">large peaceful rooms</span>, 
+        <span class="p2">a lovely green garden</span> 
+        and 
+        <span class="p3">clean airy windows</span>. 
+        It is the place where my family lives happily together.
+    </p>
+
+    <!-- Replace myphoto.jpg with your image -->
+    <img src="myphoto.jpg" id="img">
+
+</body>
+</html>
