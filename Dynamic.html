@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stack Elements</title>
+
+<style>
+#container{
+    position:relative;
+    width:400px;
+    height:400px;
+}
+
+.item{
+    position:absolute;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="stackItems()">Stack</button>
+
+<div id="container"></div>
+
+<script>
+
+function stackItems()
+{
+    let container = document.getElementById("container");
+
+    container.innerHTML =
+    '<div class="item" style="top:0px;">Welcome MCA Students</div>' +
+    '<img src="image1.jpg" class="item" style="top:40px;width:150px;">' +
+    '<img src="image2.jpg" class="item" style="top:200px;width:150px;">';
+}
+
+</script>
+
+</body>
+</html>
