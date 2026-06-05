@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle Type</title>
+</head>
+<body>
+
+<script>
+
+var a = parseInt(prompt("Enter Side 1"));
+var b = parseInt(prompt("Enter Side 2"));
+var c = parseInt(prompt("Enter Side 3"));
+
+if(a == b)
+{
+    if(b == c)
+    {
+        document.write("Equilateral Triangle");
+    }
+    else
+    {
+        document.write("Isosceles Triangle");
+    }
+}
+else
+{
+    if(a == c || b == c)
+    {
+        document.write("Isosceles Triangle");
+    }
+    else
+    {
+        document.write("Scalene Triangle");
+    }
+}
+
+</script>
+
+</body>
+</html>
