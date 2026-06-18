@@ -1,0 +1,29 @@
+Create a HTML Dynamic Document with JavaScript for Stacking of text / images.
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+var topElementId = "Flower1";
+function toTop(newTopId)
+{
+var domTop = document.getElementById(topElementId).style;
+var domNew = document.getElementById(newTopId).style;
+domTop.zIndex = "0";
+domNew.zIndex = "10";
+topElementId = newTopId;
+}
+</script>
+<style type="text/css">
+.plane1 {position: absolute; top: 0; left: 0; z-index: 0}
+.plane2 {position: absolute; top: 20px; left: 20px; z-index: 0}
+.plane3 {position: absolute; top: 40px; left: 40px; z-index: 0}
+</style>
+</head>
+<body>
+<p>
+<img class="plane1" id=" Flower1" src="Flower1.jpeg" alt="flower image" onclick="toTop('Flower1')" />
+<img class="plane2" id=" Flower2" src="Flower2.jpeg" alt="flower1 image" onclick="toTop('Flower2')" />
+<img class="plane3" id=" Lion1" src="Lion1.jpeg" alt="lion image" onclick="toTop('Lion1')" />
+</p>
+</body>
+</html>
