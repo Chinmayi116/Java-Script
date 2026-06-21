@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Image to Corners</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            position: relative;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .container img {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+
+            /* Initially Northwest */
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="moveImage('nw')">Northwest</button>
+    <button onclick="moveImage('ne')">Northeast</button>
+    <button onclick="moveImage('sw')">Southwest</button>
+    <button onclick="moveImage('se')">Southeast</button>
+
+    <div class="container">
+        <img id="myImage" src="https://via.placeholder.com/80" alt="Image">
+
+        <p>
+            This is a sample text area. Click the buttons above to move the
+            image to the Northwest, Northeast, Southwest, or Southeast corner
+            of this text container.
+        </p>
+    </div>
+
+    <script>
+        function moveImage(position) {
+            const img = document.getElementById("myImage");
+
+            if (position === "nw") {
+                img.style.top = "0";
+                img.style.left = "0";
+                img.style.right = "";
+                img.style.bottom = "";
+            }
+
+            if (position === "ne") {
+                img.style.top = "0";
+                img.style.right = "0";
+                img.style.left = "";
+                img.style.bottom = "";
+            }
+
+            if (position === "sw") {
+                img.style.bottom = "0";
+                img.style.left = "0";
+                img.style.top = "";
+                img.style.right = "";
+            }
+
+            if (position === "se") {
+                img.style.bottom = "0";
+                img.style.right = "0";
+                img.style.top = "";
+                img.style.left = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
